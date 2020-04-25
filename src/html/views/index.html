@@ -1,0 +1,77 @@
+<% var data = {
+  title: "Заголовок | Проект"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<!--Start app-->
+<div class="app" id="app">
+
+    <!--Start main-->
+    <section class="main position-relative section" data-section-number="0">
+
+            <!--Start slider-->
+            <div class="main-slider">
+
+                <!--Start slide-->
+                <div class="main-slide slide-1"></div>
+
+                <!--End slide-->
+
+
+                <!--Start slide-->
+                <div class="main-slide slide-2"></div>
+
+                <!--End slide-->
+
+                <!--Start slide-->
+                <div class="main-slide slide-3"></div>
+
+                <!--End slide-->
+
+                <!--Start slide-->
+                <div class="main-slide slide-4"></div>
+
+                <!--End slide-->
+
+                <!--Start slide-->
+                <div class="main-slide slide-5"></div>
+
+                <!--End slide-->
+
+
+                <h1 class="bilim-back slide-1">H</h1>
+                <h1 class="bilim slide-1">H</h1>
+
+                <h1 class="bilim-back slide-2">H</h1>
+                <h1 class="bilim slide-2">H</h1>
+
+                <h1 class="bilim-back slide-3">H</h1>
+                <h1 class="bilim slide-3">H</h1>
+
+                <h1 class="bilim-back slide-4">H</h1>
+                <h1 class="bilim slide-4">H</h1>
+
+                <h1 class="bilim-back slide-5">H</h1>
+                <h1 class="bilim slide-5">H</h1>
+
+                <div class="main-container">
+                    <h3 class="main-big-text">
+
+                    </h3>
+
+                    <p class="main__text">
+                        Bilim agency – независимое агентство с комплексным <br>
+                        подходом, базирующееся в Санкт-Петербурге.
+                    </p>
+                </div>
+
+            </div>
+            <!--End slider-->
+
+    </section>
+    <!--End main-->
+
+</div>
+<!--End app-->
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

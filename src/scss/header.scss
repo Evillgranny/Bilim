@@ -1,0 +1,217 @@
+@import "vars";
+body {
+  overflow: hidden;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.logo {
+  width: 97.4px;
+}
+.whopper {
+  width: 50px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: .7s;
+  //open Menu
+  span {
+    transition: .7s;
+  }
+  &.active {
+    width: 50px;
+    height: 36px;
+
+    // First line
+    span:nth-child(1) {
+      transform: rotate(45deg);
+      transform-origin: left top;
+      width: 50px;
+    }
+
+    // Second line
+    span:nth-child(2) {
+      width: 0;
+    }
+
+    // Three line
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+      transform-origin: left bottom;
+      width: 50px;
+    }
+  }
+}
+.whopper-hr {
+  display: block;
+  background: #D6D6D6;
+  width: 100%;
+  height: 2px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.menu {
+  pointer-events: auto;
+  z-index: -1;
+  background: #151515;;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.logo-link {
+  pointer-events: auto;
+}
+
+.menu-list-li {
+  list-style: none;
+  margin-bottom: 5.31vh;
+  @media screen and  (max-width: 1300px) {
+    margin-bottom: 70px;
+  }
+  @media screen  and  (max-width: 1024px) {
+    margin-bottom: 5px;
+  }
+  @media screen  and  (max-width: 360px) {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    font-family: $proxima;
+    font-weight: 900;
+    font-size: 6.66rem;
+    -webkit-text-stroke: 2px #404040;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .7s;
+    color:  #151515;
+    @media screen  and (max-width: 1024px) {
+      font-size: 4.4rem;
+      line-height: normal;
+    }
+    @media screen  and (max-width: 768px) {
+      font-size: 4.4rem;
+      line-height: normal;
+    }
+    @media screen  and (max-width: 500px) {
+      font-size: 3.66rem;
+      line-height: normal;
+    }
+
+    &:hover {
+      -webkit-text-stroke: 2px #E61B6A;
+      text-shadow: 0px 0px 15px #FF0063;
+    }
+  }
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  @media screen and  (max-width: 1300px) {
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+  }
+}
+.social-icons {
+  margin-left: -30px;
+  margin-top: .6rem;
+  @media screen and (max-width: 500px) {
+    margin-left: -15px;
+  }
+
+  a {
+    margin-left: 30px;
+    text-decoration: none;
+    @media screen and (max-width: 500px) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.menu-social-list li {
+  list-style: none;
+  margin-bottom: 117px;
+
+  @media screen  and (max-width: 1300px){
+    margin-bottom: 0;
+  }
+  @media screen  and (max-width: 1024px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 500px) {
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.social-text {
+  font-family: $proxima;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.33rem;
+  color: #F5F5F5;
+}
+.social-text-link {
+  color: #F5F5F5;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 30px;
+  font-weight: 300;
+  font-family: $openSans;
+  margin-top: 10px;
+  display: block;
+}
+.menu-social-list {
+  margin-left: 17.8vw;
+  @media screen  and (max-width: 1600px){
+    margin-left: 6vw;
+  }
+  @media screen  and (max-width: 1300px) {
+    margin-left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 120px;
+  }
+  @media screen  and (max-width: 1024px) {
+    margin-left: 0;
+    margin-top: 100px;
+  }
+  @media screen  and (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  @media screen  and (max-width: 500px) {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  @media screen and (max-width: 360px) {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+}
