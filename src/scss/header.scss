@@ -79,13 +79,16 @@ body {
 .menu-list-li {
   list-style: none;
   margin-bottom: 5.31vh;
-  @media screen and  (max-width: 1300px) {
-    margin-bottom: 70px;
+  @media screen and (min-width: 1024px) and  (max-width: 1300px) {
+    margin-bottom: 0;
   }
-  @media screen  and  (max-width: 1024px) {
-    margin-bottom: 5px;
+  @media screen  and (min-width: 768px) and  (max-width: 1024px) {
+    margin-bottom: 40px;
   }
-  @media screen  and  (max-width: 360px) {
+  @media screen and (min-width: 500px)  and  (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 0)  and  (max-width: 500px) {
     margin-bottom: 0;
   }
 
@@ -96,23 +99,29 @@ body {
   a {
     font-family: $proxima;
     font-weight: 900;
-    font-size: 6.66rem;
-    -webkit-text-stroke: 2px #404040;
+    font-size: 110px;
+    -webkit-text-stroke: 2px #545454;
     text-decoration: none;
     text-transform: uppercase;
     transition: .7s;
     color:  #151515;
-    @media screen  and (max-width: 1024px) {
-      font-size: 4.4rem;
+
+    @media screen and (min-width: 1024px) and (max-width: 1300px) {
+      font-size: 100px;
       line-height: normal;
     }
-    @media screen  and (max-width: 768px) {
-      font-size: 4.4rem;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 70px;
       line-height: normal;
     }
-    @media screen  and (max-width: 500px) {
-      font-size: 3.66rem;
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      font-size: 44px;
       line-height: normal;
+    }
+    @media screen and (min-width: 0) and (max-width: 500px) {
+      font-size: 40px;
+      line-height: normal;
+      -webkit-text-stroke: 1px #545454
     }
 
     &:hover {
@@ -124,43 +133,35 @@ body {
 .menu-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   @media screen and  (max-width: 1300px) {
     flex-direction: column;
     align-items: normal;
     justify-content: center;
   }
 }
-.social-icons {
-  margin-left: -30px;
-  margin-top: .6rem;
-  @media screen and (max-width: 500px) {
-    margin-left: -15px;
-  }
 
-  a {
-    margin-left: 30px;
-    text-decoration: none;
-    @media screen and (max-width: 500px) {
-      margin-left: 15px;
-    }
-  }
-}
+
+
 
 .menu-social-list li {
   list-style: none;
   margin-bottom: 117px;
-
-  @media screen  and (max-width: 1300px){
+  @media screen and (min-width: 1300px) and (max-width: 1600px){
+    margin-bottom: 80px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px){
     margin-bottom: 0;
   }
-  @media screen  and (max-width: 1024px) {
-    margin-bottom: 50px;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-bottom: 0;
   }
-  @media screen and (max-width: 768px) {
-    margin-bottom: 30px;
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    margin-bottom: 0;
   }
-  @media screen and (max-width: 500px) {
-    margin-bottom: 30px;
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    margin-bottom: 0;
   }
 
   &:last-child {
@@ -175,6 +176,7 @@ body {
   line-height: 1.33rem;
   color: #F5F5F5;
 }
+
 .social-text-link {
   color: #F5F5F5;
   text-decoration: none;
@@ -182,36 +184,148 @@ body {
   line-height: 30px;
   font-weight: 300;
   font-family: $openSans;
-  margin-top: 10px;
+  margin-top: .6rem;
   display: block;
-}
-.menu-social-list {
-  margin-left: 17.8vw;
-  @media screen  and (max-width: 1600px){
-    margin-left: 6vw;
+  transition: .7s;
+  &:hover {
+    color: #E61B6A;
   }
-  @media screen  and (max-width: 1300px) {
+  @media screen and (max-width: 500px) {
+    margin-top: 0;
+    font-size: 10px;
+  }
+}
+
+.menu-social-list {
+  @media screen  and (min-width: 1024px) and (max-width: 1300px) {
     margin-left: 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-top: 120px;
+    margin-top: 60px;
   }
-  @media screen  and (max-width: 1024px) {
+  @media screen and (min-width: 768px)  and (max-width: 1024px) {
     margin-left: 0;
-    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
   }
   @media screen  and (max-width: 768px) {
     margin-left: 0;
-    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
   }
   @media screen  and (max-width: 500px) {
     margin-left: 0;
-    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
   }
   @media screen and (max-width: 360px) {
     margin-left: 0;
-    margin-top: 0;
+    margin-top: 15px;
+  }
+}
+
+.social-icons {
+  margin-left: -30px;
+  margin-top: .6rem;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-left: -20px
+  }
+  @media screen and (min-width: 0) and (max-width: 768px) {
+    margin-left: -12px;
   }
 
+  a {
+    margin-left: 30px;
+    text-decoration: none;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      margin-left: 20px;
+    }
+    @media screen and (min-width: 0) and (max-width: 768px) {
+      margin-left: 12px;
+    }
+  }
+}
+
+.social-icon {
+  display: inline-block;
+  //instagram
+  &.instagram {
+    width: 30px;
+    height: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 26px;
+      height: 26px;
+    }
+    @media screen and (min-width: 0) and (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  //facebook
+  &.facebook {
+    width: 16px;
+    height: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 14px;
+      height: 26px;
+    }
+    @media screen and (min-width: 0) and (max-width: 768px) {
+      width: 10px;
+      height: 20px;
+    }
+  }
+  //skype
+  &.skype {
+    width: 30px;
+    height: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 26px;
+      height: 26px;
+    }
+    @media screen and (min-width: 0) and (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  //telegram
+  &.telegram {
+    width: 35px;
+    height: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 30px;
+      height: 26px;
+    }
+    @media screen and (min-width: 0) and (max-width: 768px) {
+      width: 23px;
+      height: 20px;
+    }
+  }
+  &.whatsapp {
+    width: 30px;
+    height: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 26px;
+      height: 26px;
+    }
+    @media screen and (min-width: 0) and (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.social-icon path {
+  transition: .7s;
+  fill: #F5F5F5;
+}
+
+.social-icon:hover path  {
+  fill: #E61B6A;
 }

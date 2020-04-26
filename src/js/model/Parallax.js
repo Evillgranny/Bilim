@@ -13,9 +13,19 @@ export class Parallax {
             let mouseX = e.clientX - this.centerW,
                 mouseY = e.clientY - this.centerH
 
-            $(this.parallaxBlock).css({
-                'background-position': `${(((1920  - this.width) / 2 * (-1)) + (mouseX / 20 * (-1)))}px ${(((940  - this.height) / 2 * (-1)) + (mouseY / 20 * (-1)))}px`,
-            })
+
+            if (this.width < 1921 && this.width > 1600)
+                $(this.parallaxBlock).css({
+                    'background-position': `${(((1920  - this.width) / 2 * (-1)) + (mouseX / 20 * (-1)))}px ${(((940  - this.height) / 2 * (-1)) + (mouseY / 20 * (-1)))}px`,
+                })
+            if (this.width <= 1600 && this.width > 1300)
+                $(this.parallaxBlock).css({
+                    'background-position': `${(((1600  - this.width) / 2 * (-1)) + (mouseX / 20 * (-1)))}px ${(((940  - this.height) / 2 * (-1)) + (mouseY / 20 * (-1)))}px`,
+                })
+            if (this.width <= 1300 && this.width > 1024)
+                $(this.parallaxBlock).css({
+                    'background-position': `${(((1300  - this.width) / 2 * (-1)) + (mouseX / 20 * (-1)))}px ${(((940  - this.height) / 2 * (-1)) + (mouseY / 20 * (-1)))}px`,
+                })
         })
     }
 }
