@@ -13,7 +13,6 @@ export class Parallax {
             let mouseX = e.clientX - this.centerW,
                 mouseY = e.clientY - this.centerH
 
-
             if (this.width < 1921 && this.width > 1600)
                 $(this.parallaxBlock).css({
                     'background-position': `${(((1920  - this.width) / 2 * (-1)) + (mouseX / 20 * (-1)))}px ${(((940  - this.height) / 2 * (-1)) + (mouseY / 20 * (-1)))}px`,

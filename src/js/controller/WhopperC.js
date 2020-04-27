@@ -1,7 +1,18 @@
 import { Menu } from "../model/Whopper";
 
-export let menu = new Menu('.whopper', '#menu', '.section')
+export let menu = new Menu('.whopper', '#menu', '#app')
 
-menu.openMenu()
+$('.whopper').on('click', function () {
+    if ($(this).hasClass('active'))
+        menu.closeMenu()
+    else
+        menu.openMenu()
+})
+
+document.addEventListener('keydown', (e) => {
+    if (e.keyCode === 27)
+        menu.closeMenu()
+})
+
 
 

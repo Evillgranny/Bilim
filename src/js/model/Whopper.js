@@ -6,33 +6,26 @@ export class Menu {
     }
 
     openMenu () {
-        $(this.btn).on('click', () => {
-            if (!$(this.btn).hasClass('active')) {
+        $(this.menu).animate({
+            'margin-top': '0'
+        }, 700)
 
-                $(this.menu).animate({
-                    'margin-top': '0'
-                }, 700)
+        $(this.section).animate({
+            'margin-top': '100vh'
+        }, 700)
 
-                $(this.section).animate({
-                    'margin-top': '100vh'
-                }, 700)
+        $(this.btn).addClass('active')
+    }
 
-                $(this.btn).addClass('active')
+    closeMenu () {
+        $(this.menu).animate({
+            'margin-top': '-100vh'
+        }, 700)
 
+        $(this.section).animate({
+            'margin-top': '0'
+        }, 700)
 
-            } else {
-
-                $(this.menu).animate({
-                    'margin-top': '-100vh'
-                }, 700)
-
-                $(this.section).animate({
-                    'margin-top': '0'
-                }, 700)
-
-                $(this.btn).removeClass('active')
-
-            }
-        })
+        $(this.btn).removeClass('active')
     }
 }
