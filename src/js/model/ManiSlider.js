@@ -6,16 +6,10 @@ export class ManiSlider {
         this.shadowArr = document.querySelectorAll(shadowArr)
         this.counter = 0
 
-
         $(this.slidesArr[0]).css('opacity', '1')
         $(this.slidesInArr[0]).css('opacity', '1')
         $(this.shadowArr[0]).css('opacity', '1')
         $(this.bigTextArr[0]).addClass('active')
-
-
-        setInterval(() => {
-            this.newSlide()
-        }, 5000)
     }
 
     newSlide () {
@@ -34,8 +28,6 @@ export class ManiSlider {
 
         if (this.counter === this.slidesArr.length)
             this.counter = 0
-
-
 
         $(this.slidesArr[this.counter]).addClass('active')
             .animate({opacity: 1}, 3000)

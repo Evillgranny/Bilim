@@ -7,6 +7,7 @@ export class MainScroll {
         this.addDots(dotClass)
         this.firstScene = this.sectionsArr[0]
         this.maxCounter = (this.sectionsArr.length - 1) * (-1)
+        $(this.sectionsArr[0]).addClass('selected')
     }
 
     moveScene (e) {
@@ -23,6 +24,9 @@ export class MainScroll {
             $(this.firstScene).addClass('active')
 
             this.counter--
+
+            $(this.sectionsArr).removeClass('selected')
+            this.sectionsArr[this.counter * (-1)].classList.add('selected')
 
             $(this.firstScene).animate({
                 marginTop: `${this.counter * 100}vh`
@@ -42,6 +46,9 @@ export class MainScroll {
             $(this.firstScene).addClass('active')
 
             this.counter++
+
+            $(this.sectionsArr).removeClass('selected')
+            $(this.sectionsArr[this.counter]).addClass('selected')
 
             $(this.firstScene).animate({
                 marginTop: `${this.counter * 100}vh`

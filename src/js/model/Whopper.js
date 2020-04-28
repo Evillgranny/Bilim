@@ -15,6 +15,8 @@ export class Menu {
         }, 700)
 
         $(this.btn).addClass('active')
+
+        $('html, body').addClass('blocked')
     }
 
     closeMenu () {
@@ -27,5 +29,7 @@ export class Menu {
         }, 700)
 
         $(this.btn).removeClass('active')
+
+        $('html, body').removeClass('blocked')
     }
 }

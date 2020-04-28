@@ -3,6 +3,10 @@
 @import "header";
 @import "fonts";
 @import "vars";
+@import "~slick-carousel/slick/slick";
+
+
+
 
 @keyframes scroll-hr {
   from {
@@ -31,6 +35,15 @@
   }
 }
 
+@keyframes runningLine {
+  from  {
+    margin-left: 205%;
+  }
+  to {
+    margin-left: -205%;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -38,7 +51,11 @@
   outline: none;
 }
 
-
+.blocked {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
 
 .bilim  {
   opacity: 0;
@@ -581,11 +598,162 @@
 }
 
 .who-we {
-  background: red;
+  background: #151515;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .app {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+}
+
+.who-we-container {
+  display: flex;
+
+  @media screen and (min-width: 0) and (max-width: 1300px) {
+    flex-direction: column;
+  }
+}
+
+.default-main {
+  font-family: $proxima;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 120px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color:  #151515;
+  -webkit-text-stroke: 2px #545454;
+  white-space: nowrap;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    font-size: 100px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 60px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    font-size: 36px;
+    -webkit-text-stroke: 1px #545454;
+  }
+}
+
+.default-text {
+  font-size: 18px;
+  line-height: 25px;
+  color: #C8C8C8;
+  font-weight: 400;
+  font-family: $openSans;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 500px) and (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.ping-text {
+  font-family: $openSans;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  color: #E61B6A;
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    font-size: 28px;
+    line-height: 100%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 100%;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    font-size: 20px;
+    line-height: 100%;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    font-size: 16px;
+    line-height: 100%;
+  }
+}
+
+.who-we-ping-text {
+  margin-bottom: 20px;
+}
+
+.who-we-container-right {
+  margin-left: 45px;
+
+  @media screen and (min-width: 0) and (max-width: 1300px) {
+    margin-left: -0px;
+  }
+}
+
+.running-line {
+  width: 1950px;
+  border-top: 2px solid #E61B6A;
+  border-bottom: 2px solid #E61B6A;
+  box-shadow: 0px 0px 15px #FF0063, inset 0px 0px 15px #FF0063;
+  padding: 28px 0;
+  background: #151515;
+  height: 136px;
+  position: relative;
+  margin-top: 10vh;
+  white-space: nowrap;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    margin-top: 5vh;
+    padding: 14px 0;
+    height: 108px;
+    transform: translateX(-50%) scale(.83);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-top: 5vh;
+    transform: translateX(-50%) scale(.65);
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    margin-top: 5vh;
+    transform: translateX(-50%) scale(.55);
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    margin-top: 3vh;
+    transform: translateX(-50%) scale(.35);
+  }
+
+  &-text {
+    color: #E61B6A;
+    text-transform: uppercase;
+    font-family: $proxima;
+    font-weight: bold;
+    font-size: 80px;
+    white-space: nowrap;
+    height: 100%;
+    display: block;
+  }
+}
+
+.who-we-main {
+  @media screen and (min-width: 768px) and (max-width: 1300px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    margin-bottom: 15px;
+  }
 }

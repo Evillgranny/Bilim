@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const { detect } = require('detect-browser');
 
 
 function generateHtmlPlugins(templateDir) {
@@ -93,7 +94,8 @@ const config = {
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
     new MiniCssExtractPlugin({
       filename: "./css/style.bundle.css"
