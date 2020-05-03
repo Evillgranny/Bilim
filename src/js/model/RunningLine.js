@@ -1,4 +1,4 @@
-import 'slick-carousel'
+
 
 export class RunningLine {
     constructor(block) {

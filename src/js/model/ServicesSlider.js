@@ -9,13 +9,15 @@ export class ServicesSlider {
         $(this.slider).slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: false,
+            autoplay: true,
             dots: false,
             arrows: true,
             asNavFor: this.textSlider,
             prevArrow: '<button class="service-arr-prev"></button>',
             nextArrow: '<button class="service-arr-next"></button>',
-            infinite: true
+            infinite: false,
+            swipe: false,
+            speed: 1500
         })
     }
 
@@ -25,11 +27,13 @@ export class ServicesSlider {
         $(this.textSlider).slick({
             slidesToShow: 3,
             asNavFor: this.slider,
-            autoplay: false,
+            autoplay: true,
             dots: false,
             arrows: false,
-            infinite: true,
-            variableWidth: true
+            infinite: false,
+            variableWidth: true,
+            swipe: false,
+            speed: 1500
         })
     }
 
