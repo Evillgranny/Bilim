@@ -72,14 +72,7 @@
 
             </div>
             <!--End slider-->
-        <!--Start scroll-->
 
-        <div class="scroll-container">
-            <div class="scroll-hr"></div>
-            <p class="scroll-text">scroll</p>
-        </div>
-
-        <!--End scroll-->
     </section>
     <!--End main-->
 
@@ -118,9 +111,7 @@
             <!--End who-we-container-->
 
 
-            <div class="loading">
-                Bilim
-            </div>
+            <div class="loading">Loading</div>
         </div>
         <!--End wrapper-in-->
 
@@ -551,6 +542,34 @@
                         <img src="img/partners/1.png" alt="" class="partners-slider-img">
                     </div>
                 </div>
+
+                <div class="partners-slide default-slide">
+                    <div class="default-slide-container">
+                        <div class="partners-slide-text h-100">
+                            <div class="partners-slide-text-top">
+                                <img src="img/partners/logo.png" alt="" class="partners-slide-logo">
+                                <a href="tel: +78124070776" class="partners-slide-phone">
+                                    +7 812 407 07 76
+                                </a>
+                            </div>
+
+                            <div class="partners-slide-text-bottom">
+                                <h2 class="partners-slide-main">
+                                    uprock
+                                </h2>
+
+                                <p class="partners-slide-description default-text">
+                                    Описание партнера, кто он, что делает, какое сотрудничество...
+                                </p>
+
+                                <p class="default-text">
+                                    Мы поможем вам разобраться в многообразии современных инструментов продвижения, таких как поисковая оптимизация (SEO)/
+                                </p>
+                            </div>
+                        </div>
+                        <img src="img/partners/1.png" alt="" class="partners-slider-img">
+                    </div>
+                </div>
             </div>
 
 
@@ -709,16 +728,14 @@
 
     </footer>
     <!--End footer-->
-
-    <!--Start dots-->
-    <div class="dots">
-            <div class="wrapper h-100 position-relative">
-                <ul class="dots-list"></ul>
-            </div>
-        </div>
-    <!--End dots-->
-
 </div>
 <!--End app-->
+
+<section class="mobile-landscape">
+    <h2 class="default-main mobile-landscape-main">
+        Переверните ваше <br> усройство
+    </h2>
+    <img src="img/mli.png" alt="" class="mobile-landscape-im">
+</section>
 
 <%= _.template(require('./../includes/footer.html').default)(data) %>

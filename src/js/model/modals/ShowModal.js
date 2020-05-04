@@ -1,7 +1,8 @@
 export class ShowModal {
-    constructor(btn, modal) {
+    constructor(btn, modal, section) {
         this.btn = document.querySelector(btn)
         this.modal = document.querySelector(modal)
+        this.section = section
     }
 
     modalShow () {
@@ -11,11 +12,11 @@ export class ShowModal {
             }, 700)
                 .addClass('active')
 
-            $('body, html').css({
-                'width': '100vw',
-                'height': '100vh',
-                'overflow': 'hidden'
-            })
+            $(this.section).animate({
+                'margin-top': '100vh'
+            }, 700)
+
+            $('html, body').addClass('blocked')
         })
     }
 }

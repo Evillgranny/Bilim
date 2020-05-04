@@ -21,6 +21,10 @@ export class MainScroll {
 
     keyDown () {
         if (!$(this.firstScene).hasClass('active') && this.counter !== this.maxCounter) {
+            $(this.sectionsArr).css({height: '100vh'})
+            $('#app').css({height: '100vh'})
+
+
             $(this.firstScene).addClass('active')
 
             this.counter--
@@ -31,6 +35,10 @@ export class MainScroll {
             $(this.firstScene).animate({
                 marginTop: `${this.counter * 100}vh`
             }, 1000)
+
+            $('html, body').animate({
+                scrollTop: '100vh'
+            })
 
             $(this.dotsArr).removeClass('selected')
             $(this.dotsArr[this.counter * (-1)] ).addClass('selected')
@@ -43,6 +51,9 @@ export class MainScroll {
 
     keyUp () {
         if (!$(this.firstScene).hasClass('active') && this.counter !== 0) {
+            $(this.sectionsArr).css({height: '100vh'})
+            $('#app').css({height: '100vh'})
+
             $(this.firstScene).addClass('active')
 
             this.counter++

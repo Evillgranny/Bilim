@@ -1,4 +1,4 @@
-import { RunningLine } from "../model/RunningLine";
+import { RunningLine } from "../../model/sliders/RunningLine";
 
 export let running = new RunningLine('.running-line')
 

@@ -1,4 +1,4 @@
-import { MainScroll } from "../model/MainScroll"
+import { MainScroll } from "../../model/scroll/MainScroll"
 
 export let scroll = new MainScroll('.section', '.dots-list', 'dot')
 

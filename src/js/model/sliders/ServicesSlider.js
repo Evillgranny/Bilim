@@ -15,7 +15,7 @@ export class ServicesSlider {
             asNavFor: this.textSlider,
             prevArrow: '<button class="service-arr-prev"></button>',
             nextArrow: '<button class="service-arr-next"></button>',
-            infinite: false,
+            infinite: true,
             swipe: false,
             speed: 1500
         })
@@ -30,7 +30,7 @@ export class ServicesSlider {
             autoplay: true,
             dots: false,
             arrows: false,
-            infinite: false,
+            infinite: true,
             variableWidth: true,
             swipe: false,
             speed: 1500

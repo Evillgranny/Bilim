@@ -1,4 +1,4 @@
-import {ManiSlider} from "../model/ManiSlider";
+import {ManiSlider} from "../../model/sliders/ManiSlider";
 
 let textArr = ['BRANDING.', 'DIGITAL.', 'PR.', 'Marketing.', 'EVENT.']
 
