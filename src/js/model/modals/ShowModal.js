@@ -7,16 +7,14 @@ export class ShowModal {
 
     modalShow () {
         $(this.btn).on('click', () => {
-            $(this.modal).animate({
-                top: 0
-            }, 700)
-                .addClass('active')
+            $(this.modal).addClass('open')
 
-            $(this.section).animate({
-                'margin-top': '100vh'
+            $(this.section).addClass('open')
+
+            setTimeout(function () {
+                $('body, html').addClass('blocked')
             }, 700)
 
-            $('html, body').addClass('blocked')
         })
     }
 }

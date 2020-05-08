@@ -7,6 +7,31 @@
 
 body {
   background: #151515;
+  scrollbar-width: none;
+
+}
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: none;
+}
+
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: .7s;
+
+  &.mobile {
+    width: auto;
+    height: auto;
+    overflow: auto;
+  }
+
+  &.open {
+    margin-top: 100vh;
+  }
 }
 
 
@@ -74,9 +99,8 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  display: flex;
-  justify-content: center;
   pointer-events: none;
+  color: transparent;
 
   @media screen and (min-width: 1300px) and (max-width: 1600px){
     font-size: 462px;
@@ -101,28 +125,42 @@ body {
   &.slide-1 {
     background: url(../img/slider_2.0/11.jpg) no-repeat center center / 1920px 100%;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #E61B6A;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
     @media screen and (min-width: 1921px)  {
       background: url(../img/slider_2.0/11.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1300px) and (max-width: 1600px) {
       background: url(../img/slider_2.0/11.jpg) no-repeat center center / 1600px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1024px) and (max-width: 1300px) {
       background: url(../img/slider_2.0/11.jpg) no-repeat center center / 1300px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 0px) and (max-width: 1024px) {
       background: url(../img/slider_2.0/1024-11.jpg) no-repeat center center / 100% 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #E61B6A;
     }
     @media screen  and (min-width: 0) and (max-width: 1024px) and (orientation: landscape){
       background: url(../img/slider_2.0/11.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #E61B6A;
     }
   }
@@ -131,28 +169,40 @@ body {
   &.slide-2 {
     background: url(../img/slider_2.0/22.jpg) no-repeat center center / 1920px 100%;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #E61B6A;
     @media screen and (min-width: 1921px)  {
       background: url(../img/slider_2.0/22.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1300px) and (max-width: 1600px) {
       background: url(../img/slider_2.0/22.jpg) no-repeat center center / 1600px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1024px) and (max-width: 1300px) {
       background: url(../img/slider_2.0/22.jpg) no-repeat center center / 1300px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 0px) and (max-width: 1024px) {
       background: url(../img/slider_2.0/1024-22.jpg) no-repeat center center / 100% 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #E61B6A;
     }
     @media screen  and (min-width: 0) and (max-width: 1024px) and (orientation: landscape){
       background: url(../img/slider_2.0/22.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #E61B6A;
     }
   }
@@ -161,28 +211,40 @@ body {
   &.slide-3 {
     background: url(../img/slider_2.0/33.jpg) no-repeat center center / 1920px 100%;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #00FFF7;
     @media screen and (min-width: 1921px)  {
       background: url(../img/slider_2.0/33.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1300px) and (max-width: 1600px) {
       background: url(../img/slider_2.0/33.jpg) no-repeat center center / 1600px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1024px) and (max-width: 1300px) {
       background: url(../img/slider_2.0/33.jpg) no-repeat center center / 1300px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 0px) and (max-width: 1024px) {
       background: url(../img/slider_2.0/1024-33.jpg) no-repeat center center / 100% 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #00FFF7;
     }
     @media screen  and (min-width: 0) and (max-width: 1024px) and (orientation: landscape){
       background: url(../img/slider_2.0/33.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #00FFF7;
     }
   }
@@ -191,28 +253,40 @@ body {
   &.slide-4 {
     background: url(../img/slider_2.0/44.jpg) no-repeat center center / 1920px 100%;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #FA560C;
     @media screen and (min-width: 1921px)  {
       background: url(../img/slider_2.0/44.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1300px) and (max-width: 1600px) {
       background: url(../img/slider_2.0/44.jpg) no-repeat center center / 1600px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1024px) and (max-width: 1300px) {
       background: url(../img/slider_2.0/44.jpg) no-repeat center center / 1300px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 0px) and (max-width: 1024px) {
       background: url(../img/slider_2.0/1024-44.jpg) no-repeat center center / 100% 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #FA560C;
     }
     @media screen  and (min-width: 0) and (max-width: 1024px) and (orientation: landscape){
       background: url(../img/slider_2.0/44.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #FA560C;
     }
   }
@@ -221,6 +295,8 @@ body {
   &.slide-5 {
     background: url(../img/slider_2.0/55.jpg) no-repeat center center / 1920px 100%;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #FF0000;
     @media screen and (min-width: 1921px)  {
@@ -230,19 +306,27 @@ body {
     @media screen and (min-width: 1300px) and (max-width: 1600px) {
       background: url(../img/slider_2.0/55.jpg) no-repeat center center / 1600px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 1024px) and (max-width: 1300px) {
       background: url(../img/slider_2.0/55.jpg) no-repeat center center / 1300px 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
     }
     @media screen and (min-width: 0px) and (max-width: 1024px) {
       background: url(../img/slider_2.0/1024-55.jpg) no-repeat center center / 100% 100%;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #FF0000;
     }
     @media screen  and (min-width: 0) and (max-width: 1024px) and (orientation: landscape){
       background: url(../img/slider_2.0/44.jpg) no-repeat center center / cover;
       -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-stroke: 1px #FF0000;
     }
   }
@@ -326,6 +410,18 @@ body {
   height: 100vh;
   position: relative;
   background: #151515;
+
+  &.mobile {
+    width: auto;
+    height: auto;
+    padding: 50px 0;
+  }
+}
+
+.main.mobile {
+  width: auto;
+  height: 100vh;
+  padding: 0;
 }
 
 .main-container {
@@ -427,6 +523,7 @@ body {
   left: 0;
   top: 0;
   pointer-events: none;
+
   //1 slide
   &.slide-1 {
     background: url(../img/slider_2.0/1.jpg) no-repeat center center /  1920px 100%;
@@ -570,8 +667,14 @@ body {
     transform: rotate(-90deg);
     transform-origin: bottom left;
     left: calc(2.7vw + 33px);
+
+    &.mobile {
+      display: none;
+    }
     @media screen and (min-width: 0) and (max-width: 500px) {
       left: calc(2.7vw + 15px);
+      bottom: 40px;
+      margin-bottom: 5px;
     }
   }
 
@@ -602,6 +705,10 @@ body {
   pointer-events: none;
   width: 100vw;
   height: 100vh;
+
+  &.mobile {
+    display: none;
+  }
 }
 
 .dots-list {
@@ -639,6 +746,7 @@ body {
   }
 }
 
+
 .who-we {
   background: #151515;
   display: flex;
@@ -646,11 +754,6 @@ body {
   flex-direction: column;
 }
 
-.app {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-}
 
 .who-we-container {
   display: flex;
@@ -685,7 +788,7 @@ body {
     font-size: 48px;
   }
   @media screen and (min-width: 0px) and (max-width: 500px) {
-    font-size: 36px;
+    font-size: 32px;
     -webkit-text-stroke: 1px #545454;
   }
 }
@@ -703,8 +806,8 @@ body {
     line-height: 20px;
   }
   @media screen and (min-width: 0) and (max-width: 500px) {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
@@ -838,8 +941,8 @@ body {
     text-shadow: none;
   }
   @media screen and (min-width: 0) and (max-width: 500px) {
-    font-size: 40px;
-    margin-top: 130px;
+    font-size: 32px;
+    margin-top: 100px;
     text-shadow: none;
   }
 }
@@ -885,7 +988,7 @@ body {
   }
   @media screen and (min-width: 0) and (max-width: 500px) {
     left: 20px;
-    font-size: 100px;
+    font-size: 90px;
     top: 110px;
     text-shadow: 5px 5px 12px #111111, -5px -5px 12px #252525;
   }
@@ -920,7 +1023,7 @@ body {
     top: -5px;
   }
   @media screen and (min-width: 0) and (max-width: 500px) {
-    width: 217px;
+    width: 178px;
     right: 5px;
     top: -5px;
   }
@@ -1036,7 +1139,7 @@ body {
     top: -15px;
   }
   @media screen and (min-width: 0) and (max-width: 500px) {
-    top: -12px;
+    top: -26px;
     left: 5px;
   }
 
@@ -1074,7 +1177,7 @@ body {
     top: -15px;
   }
   @media screen and (min-width: 0) and (max-width: 500px) {
-    top: -12px;
+    top: -26px;
     left: 149px;
   }
 
@@ -1115,7 +1218,7 @@ body {
     width: 100%;
   }
   @media screen and (min-width: 0) and (max-width: 500px) {
-    top: 20px;
+    top: 5px;
     left: 0;
     width: 100%;
   }
@@ -1156,6 +1259,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  &.mobile {
+    padding-bottom: 75px !important;
+  }
 }
 
 .portfolio-slider-img {
@@ -1338,7 +1445,7 @@ body {
     margin-top: 30px;
   }
   @media screen and (min-width: 0) and (max-width: 500px) {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 
@@ -1417,6 +1524,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  &.mobile {
+    padding-bottom: 75px !important;
+  }
 }
 
 .partners-slider {
@@ -1428,6 +1539,9 @@ body {
   }
   @media screen and (min-width: 500px) and (max-width: 768px) {
     margin-top: 30px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    margin-top: 10px;
   }
 }
 
@@ -1663,6 +1777,9 @@ body {
     @media screen and (min-width: 500px) and (max-width: 768px) {
       margin-top: 30px;
     }
+    @media screen and (min-width: 0) and (max-width: 500px) {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -1671,6 +1788,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.mobile {
+    padding-bottom: 100px;
+  }
 }
 
 .contacts-main {
@@ -1794,6 +1915,9 @@ body {
   color: #C8C8C8;
   margin-top: 35px;
   display: block;
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    margin-top: 10px;
+  }
 }
 
 .contacts-form {
@@ -1806,6 +1930,7 @@ body {
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
     padding: 40px 28px;
     width: 485px;
+    pointer-events: auto;
   }
   @media screen and (min-width: 0) and (max-width: 1300px) {
     width: 100vw;
@@ -1820,6 +1945,12 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: none;
+    transition: .7s;
+    pointer-events: auto;
+
+    &.open {
+      top: 0;
+    }
   }
 }
 
@@ -1851,7 +1982,7 @@ body {
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
-  color: #F5F5F5;
+  color: #c8c8c8;
   margin-top: 10px;
   width: 391px;
 
@@ -2009,6 +2140,9 @@ body {
   @media screen and (min-width: 500px) and (max-width: 768px){
     width: 480px;
   }
+  @media screen and (min-width: 0) and (max-width: 500px){
+    width: 300px;
+  }
 }
 
 .contacts-input::-webkit-input-placeholder {color: #404040;}
@@ -2095,8 +2229,7 @@ body {
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  color: #f5f5f5;
-
+  color: #c8c8c8;
 
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
     font-size: 10px;
@@ -2121,7 +2254,6 @@ body {
   height: 48px;
   display: block;
   transition: .3s;
-
 
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
     width: 200px;
@@ -2235,37 +2367,5 @@ body {
   }
   &:active {
     box-shadow: inset 0px 4px 8px #AC0647;
-  }
-}
-
-.mobile-landscape {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 9999999;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-}
-.mobile-landscape-im {
-  margin-top: 15px
-}
-.mobile-landscape-main {
-  text-align: center;
-  font-size: 40px;
-}
-
-@media screen and (min-width: 0) and (max-width: 768px) and (orientation: landscape){
-  .app {
-    display: none !important;
-  }
-  header {
-    display: none !important;
-  }
-  .mobile-landscape {
-    display: flex;
   }
 }

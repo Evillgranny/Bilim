@@ -7,16 +7,13 @@ export class CloseModal {
 
     modalClose () {
         $(this.btn).on('click', () => {
-            $(this.modal).animate({
-                top: '-100vh'
-            }, 700)
-                .removeClass('active')
+            $(this.modal).removeClass('open')
 
-            $(this.section).animate({
-                'margin-top': '0'
-            }, 700)
+            $(this.section).removeClass('open')
 
-            $('html, body').removeClass('blocked')
+            setTimeout(function () {
+                $('body, html').removeClass('blocked')
+            }, 700)
         })
     }
 }

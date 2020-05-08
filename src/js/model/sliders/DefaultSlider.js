@@ -6,9 +6,9 @@ export class DefaultSlider {
     sliderInit () {
         $(this.slider).slick({
             slidesToShow: 3,
-            slidesToScroll: 1,
             autoplay: true,
             speed: 1500,
+            autoplaySpeed: 10000,
             dots: false,
             arrows: true,
             prevArrow: '<button class="default-slider-prev"></button>',
@@ -17,7 +17,6 @@ export class DefaultSlider {
             centerMode: true,
             variableWidth: true,
             centerPadding: '50px',
-            swipe: false,
             useTransform: true,
             responsive: [
                 {

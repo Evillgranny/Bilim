@@ -1,7 +1,5 @@
 @import "vars";
-body {
-  overflow: hidden;
-}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -9,6 +7,10 @@ body {
   position: relative;
   z-index: 5001;
   align-items: center;
+
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    padding-top: 5px;
+  }
 }
 .logo {
   width: 97.4px;
@@ -71,10 +73,16 @@ body {
   width: 100vw;
   height: 100vh;
   margin-top: -100vh;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
+  transition: .7s;
+
+  &.open {
+    margin-top: 0;
+  }
 }
+
 .logo-link {
   pointer-events: auto;
 }
@@ -133,6 +141,7 @@ body {
     }
   }
 }
+
 .menu-container {
   display: flex;
   align-items: center;
@@ -178,7 +187,7 @@ body {
 }
 
 .social-text-link {
-  color: #F5F5F5;
+  color: #c8c8c8;
   text-decoration: none;
   font-size: 1.2rem;
   line-height: 30px;
@@ -324,7 +333,7 @@ body {
 
 .social-icon path {
   transition: .7s;
-  fill: #F5F5F5;
+  fill: #c8c8c8;
 }
 
 .social-icon:hover path  {

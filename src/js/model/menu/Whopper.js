@@ -6,30 +6,25 @@ export class Menu {
     }
 
     openMenu () {
-        $(this.menu).animate({
-            'margin-top': '0'
-        }, 700)
+        $(this.section).addClass('open')
 
-        $(this.section).animate({
-            'margin-top': '100vh'
-        }, 700)
+        $(this.menu).addClass('open')
 
         $(this.btn).addClass('active')
 
-        $('html, body').addClass('blocked')
+        setTimeout(function () {
+            $('body, html').addClass('blocked')
+        }, 700)
     }
 
     closeMenu () {
-        $(this.menu).animate({
-            'margin-top': '-100vh'
-        }, 700)
+        $(this.menu).removeClass('open')
 
-        $(this.section).animate({
-            'margin-top': '0'
-        }, 700)
+        $(this.section).removeClass('open')
 
         $(this.btn).removeClass('active')
-
-        $('html, body').removeClass('blocked')
+        setTimeout(function () {
+            $('body, html').removeClass('blocked')
+        }, 700)
     }
 }
