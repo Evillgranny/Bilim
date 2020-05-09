@@ -1,10 +1,10 @@
 <% var data = {
   title: "Bilim"
 }; %>
-<%= _.template(require('./../includes/header.html').default)(data) %>
+<%= _.template(require('./../includes/mainPageHeader.html').default)(data) %>
 
 <!--Start app-->
-<div class="app" id="app">
+<div class="app full-page" id="app">
 
     <!--Start main-->
     <section class="main position-relative section">
@@ -734,4 +734,4 @@
 
 
 
-<%= _.template(require('./../includes/footer.html').default)(data) %>
+<%= _.template(require('./../includes/mainPageFooter.html').default)(data) %>

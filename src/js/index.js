@@ -11,8 +11,6 @@ import { inputs } from "./controller/inputs/inputFocusC"
 import { showModal } from "./controller/modal/showModalC"
 import { closeModal } from "./controller/modal/closeModalC"
 import { scroll } from "./controller/scroll/mainScrollC"
-
-
-
+import { fade} from "./controller/fadeEffect/fadeEffectC";
 
 
