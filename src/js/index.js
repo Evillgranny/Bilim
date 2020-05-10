@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import popper from "popper.js"
 import 'slick-carousel'
 
 
@@ -13,5 +12,4 @@ import { showModal } from "./controller/modal/showModalC"
 import { closeModal } from "./controller/modal/closeModalC"
 import { scroll } from "./controller/scroll/mainScrollC"
 import { fade} from "./controller/fadeEffect/fadeEffectC";
-import '@fancyapps/fancybox'
-$('.fff').fancybox()
+import { fancyboxC } from "./controller/fancyboxC";

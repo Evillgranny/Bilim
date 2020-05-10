@@ -4,7 +4,6 @@ import { MobileDetect} from "../../model/mobileDetect/MobileDetect";
 export let scroll
 
 if ($('#app.full-page').length > 0) {
-    console.log($('#app.full-page'))
     scroll = new MainScroll('.section', '.dots-list', 'dot')
     let detection = new MobileDetect()
 

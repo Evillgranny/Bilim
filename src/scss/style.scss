@@ -1,22 +1,20 @@
+@import "fonts";
 @import "reset";
 @import "mixins";
 @import "header";
-@import "fonts";
-@import "vars";
 @import "~slick-carousel/slick/slick";
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
 body {
   background: #151515;
   scrollbar-width: none;
-
 }
+
 body::-webkit-scrollbar {
   width: 0;
   height: 0;
   background: none;
 }
-
 
 .app {
   transition: .7s;
@@ -464,13 +462,13 @@ body::-webkit-scrollbar {
 .main-big-text {
   font-family: $proxima;
   font-weight: 700;
-  font-size: 3.75rem;
+  font-size: 60px;
   color: $white;
   text-transform: uppercase;
-  line-height: 3.75rem;
+  line-height: 60px;
   margin-bottom: 10px;
   display: block;
-  height: 3.75rem;
+  height: 60px;
   pointer-events: none;
   margin-left: -100px;
   transform: scale(.8);
@@ -479,6 +477,38 @@ body::-webkit-scrollbar {
   position: absolute;
   left: 0;
   top: 0;
+
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    font-size: 48px;
+    line-height: 48px;
+    height: 48px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    font-size: 48px;
+    line-height: 48px;
+    height: 48px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 48px;
+    line-height: 48px;
+    height: 48px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 40px;
+    line-height: 40px;
+    height: 40px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+  }
 
   &.active {
     transition-delay: .5s;
@@ -496,26 +526,23 @@ body::-webkit-scrollbar {
 }
 
 .main__text {
-  font-size: .88rem;
+  font-size: 16px;
   color: $white;
   line-height: 22px;
-  margin-top: 80px;
+  margin-top: 45px;
   pointer-events: none;
-
-  @media screen and (min-width: 768px)  and (max-width: 1024px) {
-    margin-top: 60px;
-  }
+  font-family: $openSans;
 
   @media screen and (min-width: 500px) and (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 12px;
     line-height: normal;
-    margin-top: 45px;
+    margin-top: 30px;
   }
 
   @media screen and (min-width: 0) and (max-width: 500px) {
-    font-size: 1rem;
     line-height: normal;
-    margin-top: 45px;
+    margin-top: 25px;
+    font-size: 12px;
   }
 
 }
@@ -672,6 +699,7 @@ body::-webkit-scrollbar {
     transform: rotate(-90deg);
     transform-origin: bottom left;
     left: calc(2.7vw + 33px);
+    font-family: $openSans;
 
     &.mobile {
       display: none;
@@ -777,7 +805,7 @@ body::-webkit-scrollbar {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color:  #151515;
-  -webkit-text-stroke: 2px #545454;
+  -webkit-text-stroke: 2px #888888;
   white-space: nowrap;
 
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
@@ -794,7 +822,7 @@ body::-webkit-scrollbar {
   }
   @media screen and (min-width: 0px) and (max-width: 500px) {
     font-size: 32px;
-    -webkit-text-stroke: 1px #545454;
+    -webkit-text-stroke: 1px #888888;
   }
 }
 
@@ -2904,3 +2932,210 @@ body::-webkit-scrollbar {
   }
 }
 
+.services-main-section  {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.services-main-section-container,
+.portfolio-main-section-container {
+  width: 1350px;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    width: 1000px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    width: 860px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 740px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    width: 300px;
+  }
+}
+
+.services-page-card-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 280px;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: 1s;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    margin-bottom: 200px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    margin-bottom: 180px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-bottom: 140px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 110px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+  }
+
+  &.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &:nth-child(even) {
+    .services-page-card-item-img {
+      left: 0;
+    }
+    .services-page-card-item-main {
+      margin-left: auto;
+      width: 660px;
+      display: flex;
+      justify-content: flex-end;
+
+      @media screen and (min-width: 1300px) and (max-width: 1600px) {
+        width: 485px;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1300px) {
+        width: 415px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 355px;
+      }
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      @media screen and (min-width: 0) and (max-width: 500px) {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      &.short {
+        justify-content: flex-start;
+      }
+    }
+    .services-page-card-item-description {
+      margin-left: auto;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.services-page-card-item-main {
+  font-family: $proxima;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 180px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #E61B6A;
+  text-shadow: -20px 20px 50px rgba(0, 0, 0, 0.78);
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    font-size: 110px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    font-size: 100px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 82px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    font-size: 68px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    font-size: 40px;
+  }
+}
+
+.services-page-card-item-description {
+  width: 660px;
+  margin-top: 45px;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    width: 485px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    width: 415px;
+    margin-top: 40px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 355px;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    margin-top: 10px;
+    width: 100%;
+    order: -1;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    margin-top: 10px;
+    width: 100%;
+    order: -1;
+  }
+}
+
+.services-page-card-item-img {
+  width: 660px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    width: 485px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    width: 415px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 355px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    width: 352px;
+    position: static;
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    width: 217px;
+    position: static;
+    margin-bottom: 10px;
+  }
+}
+
+.services-page-cards-container {
+  padding-bottom: 230px;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    padding-bottom: 150px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    padding-bottom: 130px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding-bottom: 90px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    padding-bottom: 50px;
+  }
+}

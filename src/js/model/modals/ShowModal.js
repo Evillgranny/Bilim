@@ -3,6 +3,7 @@ export class ShowModal {
         this.btn = document.querySelector(btn)
         this.modal = document.querySelector(modal)
         this.section = section
+
     }
 
     modalShow () {
@@ -18,3 +19,4 @@ export class ShowModal {
         })
     }
 }
+

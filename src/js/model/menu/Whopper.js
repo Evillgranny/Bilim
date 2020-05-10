@@ -1,8 +1,11 @@
+import { MobileDetect} from "../mobileDetect/MobileDetect";
+
 export class Menu {
     constructor (btn, menu, section) {
         this.btn = btn
         this.menu = menu
         this.section = section
+        this.detect = new MobileDetect()
     }
 
     openMenu () {
@@ -12,9 +15,11 @@ export class Menu {
 
         $(this.btn).addClass('active')
 
-        setTimeout(function () {
-            $('body, html').addClass('blocked')
-        }, 700)
+        if (this.detect.detect()) {
+            setTimeout(function () {
+                $('body, html').addClass('blocked')
+            }, 700)
+        }
     }
 
     closeMenu () {
@@ -24,8 +29,10 @@ export class Menu {
 
         $(this.btn).removeClass('active')
 
-        setTimeout(function () {
-            $('body, html').removeClass('blocked')
-        }, 700)
+        if (this.detect.detect()) {
+            setTimeout(function () {
+                $('body, html').removeClass('blocked')
+            }, 700)
+        }
     }
 }
