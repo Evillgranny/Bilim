@@ -2,6 +2,7 @@ import $ from 'jquery'
 import popper from "popper.js"
 import 'slick-carousel'
 
+
 import { menu } from './controller/menu/whopperC'
 import { parallax } from './controller/paralax/parallaxC'
 import { slider } from './controller/sliders/mainSliderC'
@@ -12,5 +13,5 @@ import { showModal } from "./controller/modal/showModalC"
 import { closeModal } from "./controller/modal/closeModalC"
 import { scroll } from "./controller/scroll/mainScrollC"
 import { fade} from "./controller/fadeEffect/fadeEffectC";
-
-
+import '@fancyapps/fancybox'
+$('.fff').fancybox()

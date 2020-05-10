@@ -4,6 +4,7 @@
 @import "fonts";
 @import "vars";
 @import "~slick-carousel/slick/slick";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
 body {
   background: #151515;
@@ -2538,6 +2539,7 @@ body::-webkit-scrollbar {
   box-shadow: -40px 40px 80px #000000;
   transition: 7s;
   width: 100%;
+  height: 100%;
 }
 
 .portfolio-card {
@@ -2633,35 +2635,41 @@ body::-webkit-scrollbar {
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
+  margin-bottom: 230px;
 
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
     width: 228px;
     height: 40px;
     font-size: 16px;
+    margin-bottom: 150px;
   }
   @media screen and (min-width: 1024px) and (max-width: 1300px) {
     width: 192px;
     height: 40px;
     font-size: 16px;
     margin-top: 60px;
+    margin-bottom: 130px;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     width: 226px;
     height: 40px;
     font-size: 16px;
     margin-top: 60px;
+    margin-bottom: 80px;
   }
   @media screen and (min-width: 500px) and (max-width: 768px) {
     width: 226px;
     height: 40px;
     font-size: 16px;
     margin-top: 60px;
+    margin-bottom: 60px;
   }
   @media screen and (min-width: 0px) and (max-width: 500px) {
     width: 195px;
     height: 40px;
     font-size: 16px;
     margin-top: 40px;
+    margin-bottom: 50px;
   }
 
   &:hover {
@@ -2671,3 +2679,228 @@ body::-webkit-scrollbar {
     box-shadow: inset 0px 4px 8px #AC0647;
   }
 }
+
+.portfolio-card-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.portfolio-card-page-main-container-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(1, 1, 1, 0) 0.87%, rgba(11, 11, 11, 0.54) 40.32%, #151515 85.24%);
+}
+
+.portfolio-card-page-main-container {
+  bottom: 175px;
+  position: absolute;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    font-size: 16px;
+    line-height: 22px;
+    bottom: 170px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    font-size: 16px;
+    line-height: 22px;
+    bottom: 200px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 12px;
+    line-height: 16px;
+    bottom: 270px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    font-size: 12px;
+    bottom: 270px;
+  }
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 6px;
+  }
+}
+
+.portfolio-card-page-main {
+  font-family: $proxima;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    font-size: 40px;
+  }
+}
+
+.portfolio-card-page-description {
+  font-family: $openSans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #C8C8C8;
+  margin-top: 10px;
+  width: 425px;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    width: 400px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    font-size: 16px;
+    line-height: 22px;
+    width: 400px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 12px;
+    line-height: 16px;
+    width: 300px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    font-size: 12px;
+    line-height: 16px;
+    width: 300px;
+  }
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 6px;
+    width: 220px;
+  }
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.portfolio-card-tasks-container {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 0) and (max-width: 1600px) {
+    flex-direction: column;
+  }
+}
+
+.portfolio-task-item {
+  width: calc(50% - 40px);
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    width: 745px;
+    &:first-child {
+      margin-bottom: 80px;
+    }
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    width: 640px;
+    &:first-child {
+      margin-bottom: 80px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 480px;
+    &:first-child {
+      margin-bottom: 80px;
+    }
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    width: 100%;
+    &:first-child {
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    width: 100%;
+    &:first-child {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.portfolio-card-tasks-main {
+  margin-bottom: 45px;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    margin-bottom: 20px;
+  }
+}
+
+.portfolio-card-tasks-submain {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    margin-bottom: 20px;
+  }
+}
+
+.portfolio-card-tasks {
+  padding: 280px 0 180px 0;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    padding: 200px 0 100px 0;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    padding: 160px 0 60px 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 140px 0 40px 0;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    padding: 100px 0 0 0;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    padding: 100px 0 0 0;
+  }
+}
+
+.portfolio-card-tasks-description {
+  margin-bottom: 0;
+}
+
+.portfolio-page-slider {
+  padding: 280px 0 230px 0;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    padding: 200px 0 175px 0;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    padding: 160px 0 135px 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 140px 0 115px 0;
+  }
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    padding: 100px 0 75px 0;
+  }
+  @media screen and (min-width: 0) and (max-width: 500px) {
+    padding: 100px 0 75px 0;
+  }
+}
+

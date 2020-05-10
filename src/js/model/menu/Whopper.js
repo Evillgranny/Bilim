@@ -23,6 +23,7 @@ export class Menu {
         $(this.section).removeClass('open')
 
         $(this.btn).removeClass('active')
+
         setTimeout(function () {
             $('body, html').removeClass('blocked')
         }, 700)
